@@ -9,7 +9,7 @@ const Navbar = () => {
                 <img className="nav-container__logo--img" src= { Logo } alt="Logo"/>
             </section>
             <section className="nav-container__search">
-                <i class="fas fa-search nav-container__search--icon"></i>
+                <i className="fas fa-search nav-container__search--icon"></i>
             </section>
         </nav>
     );
