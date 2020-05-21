@@ -29,7 +29,8 @@ class Prueba extends React.Component {
         this.setState( { loading: true, error: null } );
 
         try {
-            const data = await api.spotify.list('michael');
+            const data = await api.spotify.getArtists('michael');
+            console.log(data);
             this.setState( { loading: false, data: data } )
         }
         catch(error) {

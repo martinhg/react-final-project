@@ -1,6 +1,6 @@
 import React from 'react';
 import './SearchBox.scss';
-import api from '../../services/spotifyApi';
+
 
 const state = {
     loading:false,
@@ -8,20 +8,15 @@ const state = {
     data: undefined
 }
 
-const fetchData = async () => {
-    this.setState( { loading: true, error: null } );
+const SearchBox = () => {
+    const [search, setSearch] = React.useState('');
+    const [data, setData] = React.useState('');
 
-    try {
-        const data = await api.spotify.list('michael');
-        this.setState( { loading: false, data: data } )
+    const redir = () => {
+        window.location.href = `/search/${search}`;
     }
-    catch(error) {
-        this.setState( { loading: false, error: error } )
-    }
-}
 
-const SearchBox = (state = state) => {
-    const [query, setQuery] = React.useState('');
+    
 
     return (
         <div className="search-box-container">
@@ -29,12 +24,12 @@ const SearchBox = (state = state) => {
             <input 
                 className="searchBox-input" 
                 placeholder="Type the name of your favourite artist"
-                value= { query }
+                value= { search }
                 onChange= { (e) => {
-                    setQuery(e.target.value)
+                    setSearch(e.target.value)
                 }}
             />
-            <button onClick={fetchData}>sds</button>
+            <button onClick={redir}>Search</button>
         </div>
         
     );
