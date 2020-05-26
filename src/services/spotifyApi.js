@@ -3,7 +3,7 @@ const BASE_URL = 'https://api.spotify.com/v1';
 const callApi = (endpoint, options = {}) => {
     options.headers = {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer BQD4XlJ2FFVAETR-pup4-WW57bHjXB8wQbqTTkatUWDPH-HP9MWn5R7w30mC1t86Yeny4z53u8fGRiWG_XHkgh15S4h87CSjk5366h2zV3jeIg02RFQTF1fSrFr99eSojuLuFGTgVwDk0FcEPJJoGJ83fLZgELbRzjqqFCSKm6uSor8CXSXsW-E-fR133oqk_8A-YpQ9cZh2Y0zDgMEA6N5hKRhuCD9AcmSsoQDT-uuL6p8ip6Z0NuStgs8VhxbQXTEczPtUxZw1XvI7Dg-9MTZyMySYpXDA1389'
+        'Authorization': 'Bearer BQA-7Wjs2NhQ8CbZGXZk8s9bgavyfhcVnuYeux8Ttd83kHHq5-m_2A7PXNyFPkiDcl5fudHSB4AnTsMt4dkO35k0vbuRtQrTkNVWi7BOD-tVC5Pq10HeOcz0p-6xVvimd9sCUfvumDG3CwyqLQTwbb4EkrjxBsBcL0mopD_4nV6VtOJGx_mAPJGtFr4orAtdKXuMNwzXAN7mNNPwrjpXrd3P32R50l4XTSoum9ngfuu142Bua9wKtduNN7llQ1ueJHXylT9ruOJrb9yHB7gR4r4WThbTqyaCkj98'
     };
     const url = BASE_URL + endpoint;
     return fetch(url, options)

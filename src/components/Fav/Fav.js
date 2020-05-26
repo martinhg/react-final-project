@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Fav.scss';
 
 const Fav = (props) => {
-    console.log(props.id)
+
     const [favs, setFavs] = useState([]);
     const [fav, setFav] = useState(false);
+
+    useEffect( () => {
+        return () => {
+            console.log('desmontado');
+            localStorage.setItem('favs', JSON.stringify(favs));
+        }
+    }, []);
 
     const saveFavourite = (trackId) => {
         if (!fav) {
@@ -13,7 +20,6 @@ const Fav = (props) => {
         } else {
             setFav(false);
         }
-        localStorage.setItem('favs', JSON.stringify(favs));
     }
 
     return (

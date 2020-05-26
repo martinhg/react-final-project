@@ -28,19 +28,18 @@ const Track = (props) => {
             <h1 className="track-container__title">CD 1</h1>
             <ul className="track-container__list">
                 {props.resultado.map( (track) => {
-                    console.log(track)
                     return (
                         <li className="track-container__list--track">
                             <div className="track-container__list--track--name">
                                 <h2>Song: {track.name}</h2>
                                 <button onClick={() => playTrack(track.preview_url)}>
-                                { playingUrl === track.preview_url ? ( <i className="far fa-pause-circle"></i> ) : ( <i className="far fa-play-circle"></i> )
-                                }
-                                    
+                                { 
+                                    playingUrl === track.preview_url ? ( <i className="far fa-pause-circle"></i> ) : ( <i className="far fa-play-circle"></i> )
+                                }  
                                 </button>
                             </div>
                             <div className="track-container__list--track--fav">
-                                <Fav id={track.id}/>
+                                <Fav id={track.id} />
                             </div>
                         </li>
                     );
