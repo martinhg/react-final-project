@@ -1,6 +1,4 @@
 const BASE_URL = 'https://api.spotify.com/v1';
-const CLIENT_ID = '982cde03c5eb43778296afb6c1ec1787';
-const REDIRECT_URI = 'http://localhost:3000/';
 
 const callApi = (endpoint, options = {}) => {
     options.headers = {

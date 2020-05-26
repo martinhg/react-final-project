@@ -6,7 +6,6 @@ import SearchBox from '../../components/SearchBox/SearchBox';
 
 
 const ArtistsPage = (props) => {
-    // console.log(props)
   
     return (
         <main className="artists-page-container">
@@ -19,8 +18,7 @@ const ArtistsPage = (props) => {
             </section>
             <section className="artists-page-container__artists-section">
                 <ul className="artists-page-container__artists-section--list">
-                    {
-                    props.artists.map( (artist) => {
+                    { props.artists.map( (artist) => {
                         return (
                             <li key={artist.id} className="artists-page-container__artists-section--list--element">
                                 <Link to={`/artist/${artist.id}`}>

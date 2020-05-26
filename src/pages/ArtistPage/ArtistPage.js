@@ -2,10 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ArtistPage.scss';
 import Card from '../../components/Card/Card.js';
-import imagen from '../../assets/user.png';
 
 const ArtistPage = (props) => {
-    console.log(props.artist);
     
     return (
         <div className="artist-container">
@@ -20,7 +18,7 @@ const ArtistPage = (props) => {
             </section>
             <section className="artist-container__albums">
                 <ul className="artist-container__albums--list">
-                    {props.albums.map( (album) => {
+                    { props.albums.map( (album) => {
                         return (
                             <li key={album.id} className="artist-container__albums--list--element">
                                 <Link to={`/album/${album.id}`}>

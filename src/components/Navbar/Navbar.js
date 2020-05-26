@@ -6,6 +6,7 @@ import SearchBox from '../SearchBox/SearchBox';
 
 const Navbar = () => {
     const [show, setShow] = useState(false);
+    
     const showSearchBox = () => {
         if (show) {
             setShow(false);

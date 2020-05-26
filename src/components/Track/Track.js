@@ -3,6 +3,7 @@ import './Track.scss';
 import Fav from '../Fav/Fav';
 
 const Track = (props) => {
+
     const [playingUrl, setPlayingUrl] = useState('');
     const [audio, setAudio] = useState(null);
     const [playing, setPlaying] = useState(false);
@@ -21,7 +22,7 @@ const Track = (props) => {
             setPlayingUrl('');
         }
     }
-    // console.log(props.resultado)
+
     return (
         <div className="track-container">
             <h1 className="track-container__title">CD 1</h1>
@@ -44,7 +45,6 @@ const Track = (props) => {
                         </li>
                     );
                 })}
-                
             </ul>
         </div>
     ); 

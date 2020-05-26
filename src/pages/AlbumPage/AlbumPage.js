@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './AlbumPage.scss';
-import imagen from '../../assets/user.png';
 import Track from '../../components/Track/Track';
 
 const AlbumPage = (props) => {
@@ -17,17 +15,6 @@ const AlbumPage = (props) => {
                 </div>
             </section>
             <section className="album-container__tracks">
-                {/* <ul className="album-container__tracks--list">
-                    {/* {props.tracks.map( (track) => {
-                        return (
-                            <li key={track.id} className="artist-container__albums--list--element">
-                                <Link to={`/album/${track.id}`}>
-                                    <Track resultado={track}/>
-                                </Link>
-                            </li>
-                        );
-                    })} */}
-                {/* </ul> */}
                 <Track resultado={props.tracks}/>
             </section>
         </main>

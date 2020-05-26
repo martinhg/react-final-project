@@ -2,7 +2,7 @@ import React from 'react';
 import './HomePage.scss';
 import SearchBox from '../../components/SearchBox/SearchBox';
 
-const HomePage = (props) => {
+const HomePage = () => {
     return (
         <main className="home-page-container">
             <section className="home-page-container__welcome-section">
