@@ -11,6 +11,11 @@
         &--sub-title {
             font-size: 20px;
         }
+
+        &--search {
+            display: none;
+        }
+
     }
     
     &__artists-section {
@@ -22,6 +27,39 @@
 
             &--element {
                 margin: 10px 0;
+                
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .artists-page-container {
+        width: 70vw;
+        margin: 0 auto;
+
+        &__title-section {
+
+            &--title {
+                font-size: 50px;
+            }
+
+            &--sub-title {
+                font-size: 25px;
+            }
+
+            &--search {
+                display: block;
+                margin-bottom: 15px;
+            }
+        }
+
+        &__artists-section {
+
+            &--list {
+                display: grid;
+                grid-template-columns: repeat(2 , 1fr);
+                column-gap: 10px;
             }
         }
     }

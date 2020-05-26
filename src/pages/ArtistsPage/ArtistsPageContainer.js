@@ -5,9 +5,11 @@ import ArtistsPage from './ArtistsPage';
 const ArtistsPageContainer = (props) => {
     const search = props.match.params.search;
     const [result, setResult] = useState([{}]);
+    // var bandera = false
 
     useEffect( () => {
         fetchData();
+        // bandera = true;
         // setResult(data, setResult);
     }, []);
 
@@ -20,6 +22,7 @@ const ArtistsPageContainer = (props) => {
             const data = await api.spotify.getArtists(search);
             // console.log(data.artists.items);
             setResult(data.artists.items);
+            // bandera= true;
             // localStorage.setItem('artist', data.artists.items);
             
             // console.log(data.artists.items);
@@ -30,9 +33,17 @@ const ArtistsPageContainer = (props) => {
             console.log(error)
         }
     }
-    return (
-        <ArtistsPage artists= {result} search={search}/>
-    );
+    // console.log(result);
+    if (result.length > 1){
+        return (
+            <ArtistsPage artists= {result} search={search}/>
+        );
+
+    }
+        return (
+            ''
+        );
+
 }
 
 export default ArtistsPageContainer;

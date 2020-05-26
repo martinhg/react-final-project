@@ -5,13 +5,13 @@ import Card from '../../components/Card/Card.js';
 import imagen from '../../assets/user.png';
 
 const ArtistPage = (props) => {
-    // console.log(props.albums.items);
+    console.log(props.artist);
     
     return (
         <div className="artist-container">
             <section className="artist-container__artist-info">
                 <div className="artist-container__artist-info__image">
-                    <img className="artist-container__artist-info__image--img" src={imagen} alt="Imagen"/>
+                    <img className="artist-container__artist-info__image--img" src={props.artist.images[1].url} alt="Imagen"/>
                 </div>
                 <div className="artist-container__artist-info__info">
                     <h1 className="artist-container__artist-info__info--name">{props.artist.name}</h1>

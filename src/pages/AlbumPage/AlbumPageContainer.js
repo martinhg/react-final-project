@@ -18,7 +18,7 @@ const AlbumPageContainer = (props) => {
 
        try {
            const data = await api.spotify.getAlbum(albumId);
-           console.log(data);
+        //    console.log(data);
            setAlbum(data);
            // localStorage.setItem('artist', data.artists.items);
            
@@ -48,10 +48,12 @@ const AlbumPageContainer = (props) => {
             console.log(error)
         }
     }
-
-    return (
-        <AlbumPage album={album} tracks={tracks} />
-    );
+    if (tracks.length > 1 && Object.keys(album).length > 0) {
+        return (
+            <AlbumPage album={album} tracks={tracks} />
+        );  
+    }
+    return('');
 }
 
 export default AlbumPageContainer;

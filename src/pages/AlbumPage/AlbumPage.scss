@@ -29,3 +29,39 @@
         }
     }
 }
+
+@media (min-width: 992px) {
+    .album-container {
+        width: 70vw;
+        margin: 0 auto;
+
+        &__album-info {
+            grid-template-columns: 200px 1fr;
+
+            &__image {
+                padding: 10px;
+                width: 150px;
+            }
+
+            &__info {
+                &--title {
+                    font-size: 45px;
+                    margin-bottom: 10px;
+                }
+
+                &--label {
+                    font-size: 23px;
+                }
+            }
+        }
+
+        &__tracks {
+
+            &--list {
+                display: grid;
+                grid-template-columns: repeat(2 , 1fr);
+                column-gap: 10px;
+            }
+        }
+    }
+}

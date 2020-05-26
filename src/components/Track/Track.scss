@@ -1,0 +1,55 @@
+.track-container {
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    
+    &__title {
+        border-bottom: 2px solid black;
+        margin-bottom: 0;
+        padding-left: 10px;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        &--track {
+            display: grid;
+            grid-template-columns: repeat(2 , 1fr);
+            align-items: center;
+            border-bottom: 1px solid black;
+
+            &--name h2{
+                font-size: 20px;
+                padding-left: 10px;
+            }
+
+            &--name button {
+                width: 50px;
+                height: 40px;
+                margin-bottom: 5px;
+                margin-left: 5px;
+                background-color: black;
+            }
+
+            &--name button i {
+                color: green;
+                font-size: 25px;
+            }
+            
+            
+            &--fav {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+            }
+
+            &--fav i {
+                font-size: 30px;
+                align-self: center;
+                padding-right: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}

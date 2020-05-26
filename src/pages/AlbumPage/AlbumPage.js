@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './AlbumPage.scss';
-import Card from '../../components/Card/Card.js';
 import imagen from '../../assets/user.png';
+import Track from '../../components/Track/Track';
 
 const AlbumPage = (props) => {
     return (
         <main className="album-container">
             <section className="album-container__album-info">
                 <div className="album-container__album-info__image">
-                    <img className="album-container__album-info__image--img" src={imagen} alt="Imagen"/>
+                    <img className="album-container__album-info__image--img" src={props.album.images[1].url} alt="Imagen"/>
                 </div>
                 <div className="album-container__album-info__info">
                     <h1 className="album-container__album-info__info--title">{props.album.name}</h1>
@@ -17,17 +17,18 @@ const AlbumPage = (props) => {
                 </div>
             </section>
             <section className="album-container__tracks">
-                <ul className="album-container__tracks--list">
-                    {props.tracks.map( (track) => {
+                {/* <ul className="album-container__tracks--list">
+                    {/* {props.tracks.map( (track) => {
                         return (
                             <li key={track.id} className="artist-container__albums--list--element">
                                 <Link to={`/album/${track.id}`}>
-                                    <Card resultado={track}/>
+                                    <Track resultado={track}/>
                                 </Link>
                             </li>
                         );
-                    })}
-                </ul>
+                    })} */}
+                {/* </ul> */}
+                <Track resultado={props.tracks}/>
             </section>
         </main>
     );

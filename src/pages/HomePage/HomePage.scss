@@ -1,3 +1,33 @@
 .home-page-container {
     width: 100%;
 }
+
+
+@media (min-width: 992px) {
+    .home-page-container {
+        width: 100vw;
+        // padding: 0 300px;
+
+        &__welcome-section {
+            width: 50vw;
+            margin: 0 auto;
+
+            &--title {
+                font-size: 45px;
+            }
+
+            &--span {
+                font-size: 75px;
+            }
+
+            &--description {
+                font-size: 25px;
+            }
+        }
+
+        &__searchbox-section {
+            width: 50vw;
+            margin: 0 auto;
+        }
+    }
+}

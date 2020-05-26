@@ -1,4 +1,5 @@
 import React from 'react';
+import './Layout.scss';
 
 //Components
 import Navbar from '../Navbar/Navbar';

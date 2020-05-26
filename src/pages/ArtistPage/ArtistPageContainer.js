@@ -46,10 +46,16 @@ const ArtistPageContainer = (props) => {
            console.log(error)
        }
    }
+   console.log(artist);
 
-    return (
-        <ArtistPage artist={artist} albums={albums} />
-    );
+   if (albums.length > 1 && Object.keys(artist).length > 0) {
+        return (
+            <ArtistPage artist={artist} albums={albums} />
+        );
+   }
+   return('');
+
+    
 }
 
 export default ArtistPageContainer;
